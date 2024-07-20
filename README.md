@@ -72,7 +72,7 @@ def center_align(text, width):
     return lines  # Return the list of center-aligned lines.
 ```
 
-### 4. justify_align
+### 4. `justify_align`
 #### Purpose:
 To justify-align text within a specified width, meaning the text is spread out so that each line (except the last) is exactly the specified width.
 
