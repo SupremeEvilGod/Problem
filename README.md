@@ -132,3 +132,82 @@ To distribute the total spaces evenly between the slots (spaces between words).
 def divvy_up_spaces(total_spaces, slots):
     return divmod(total_spaces, slots)  # Return the quotient and remainder when dividing total_spaces by slots.
 ```
+
+### 6. `Function Call Lines`
+
+```python
+text = input("Enter a sentence:")
+width = int(input("Enter the width:"))
+
+print("Left Aligned:")
+print_lines(left_align(text, width))
+
+print("\nRight Aligned:")
+print_lines(right_align(text, width))
+
+print("\nCenter Aligned:")
+print_lines(center_align(text, width))
+
+print("\nJustified:")
+print_lines(justify_align(text, width))
+```
+### Sample Output
+
+```
+Enter a sentence: DNA origami 34565 is the nanoscale folding of 43 DNA to create arbitrary 356 two- and three-dimensional shapes at the nanoscale.
+Enter the width: 20
+Left Aligned:
+DNA origami 34565 is
+the nanoscale
+folding of 43 DNA to
+create arbitrary 356
+two- and
+three-dimensional
+shapes at the
+nanoscale.
+
+Right Aligned:
+DNA origami 34565 is
+       the nanoscale
+folding of 43 DNA to
+create arbitrary 356
+            two- and
+   three-dimensional
+       shapes at the
+          nanoscale.
+
+Center Aligned:
+DNA origami 34565 is
+   the nanoscale    
+folding of 43 DNA to
+create arbitrary 356
+      two- and      
+ three-dimensional  
+   shapes at the    
+     nanoscale.     
+
+Justified:
+DNA origami 34565 is
+the        nanoscale
+folding of 43 DNA to
+create arbitrary 356
+two-             and
+three-dimensional   
+shapes     at    the
+nanoscale.
+```
+
+### `Time Complexity`
+
+Each alignment function (left_align, right_align, center_align, justify_align) is O(n).
+
+print_lines is called after each alignment function, which is O(n).
+
+Combining all, the total time complexity of the program is:
+```
+O(n) + O(n) + O(n) + O(n) + O(n) + O(n) = 6⋅O(n)
+```
+
+Thus, the overall time complexity of the entire program is:
+
+#### O(n)
